@@ -4,17 +4,21 @@
 <PLUGIN 
   name="header-fix"
   author="Derek Kaser"
-  version="2026.01.07"
+  version="2026.01.07.01"
   
   pluginURL="https://raw.githubusercontent.com/dkaser/unraid-header-fix/main/plugin/header-fix.plg"
   support="https://forums.unraid.net/"
-  
+  min="7.1.0"
   
   icon="fa-wrench"
 >
 
 <CHANGES>
 <![CDATA[
+
+### 2026.01.07.01
+
+- Set min Unraid version
 
 ### 2026.01.07
 
@@ -25,9 +29,9 @@ For older releases, see https://github.com/dkaser/unraid-header-fix/releases
 ]]>
 </CHANGES>
 
-<FILE Name="/boot/config/plugins/header-fix/unraid-header-fix-2026.01.07-noarch-1.txz">
-<URL>https://github.com/dkaser/unraid-header-fix/releases/download/2026.01.07/unraid-header-fix-2026.01.07-noarch-1.txz</URL>
-<SHA256>a20d255bf80703cab8a360ee44f5141a9aa766a01eae9d4ec994036fb4d2bd29</SHA256>
+<FILE Name="/boot/config/plugins/header-fix/unraid-header-fix-2026.01.07.01-noarch-1.txz">
+<URL>https://github.com/dkaser/unraid-header-fix/releases/download/2026.01.07.01/unraid-header-fix-2026.01.07.01-noarch-1.txz</URL>
+<SHA256>93215cf9f74ff29ff970c43ded337c36ecff98e380d1420876ae7f50de453aa4</SHA256>
 </FILE>
 
 <!--
@@ -36,15 +40,15 @@ The 'install' script.
 <FILE Run="/bin/bash">
 <INLINE>
 <![CDATA[
-upgradepkg --install-new /boot/config/plugins/header-fix/unraid-header-fix-2026.01.07-noarch-1.txz
+upgradepkg --install-new /boot/config/plugins/header-fix/unraid-header-fix-2026.01.07.01-noarch-1.txz
 
 # cleanup old versions
-rm -f $(ls /boot/config/plugins/header-fix/unraid-header-fix-*.txz 2>/dev/null | grep -v '2026.01.07')
+rm -f $(ls /boot/config/plugins/header-fix/unraid-header-fix-*.txz 2>/dev/null | grep -v '2026.01.07.01')
 
 echo ""
 echo "----------------------------------------------------"
 echo " header-fix has been installed."
-echo " Version: 2026.01.07"
+echo " Version: 2026.01.07.01"
 echo "----------------------------------------------------"
 echo ""
 ]]>
