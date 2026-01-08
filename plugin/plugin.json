@@ -1,7 +1,8 @@
 {
-  "name": "header-fix",
-  "package_name": "unraid-header-fix",
-  "author": "Derek Kaser",
-  "support": "https://forums.unraid.net/",
-  "icon": "fa-wrench"
+    "name": "header-fix",
+    "package_name": "unraid-header-fix",
+    "author": "Derek Kaser",
+    "support": "https://forums.unraid.net/",
+    "icon": "fa-wrench",
+    "min": "7.1.0"
 }
