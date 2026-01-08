@@ -1,12 +1,12 @@
-         |-----handy-ruler------------------------------------------------------|
-my-plugin: my-plugin
-my-plugin:
-my-plugin: Sample slack-desc file
-my-plugin:
-my-plugin:
-my-plugin:
-my-plugin:
-my-plugin:
-my-plugin:
-my-plugin: https://github.com/my-user/my-plugin
-my-plugin:
+                 |-----handy-ruler------------------------------------------------------|
+unraid-header-fix: unraid-header-fix
+unraid-header-fix:
+unraid-header-fix: Replaces the unraid.net link in the WebGUI header with a link back to
+unraid-header-fix: the WebGUI start page.
+unraid-header-fix:
+unraid-header-fix:
+unraid-header-fix:
+unraid-header-fix:
+unraid-header-fix:
+unraid-header-fix: Repository: https://github.com/dkaser/unraid-header-fix
+unraid-header-fix:

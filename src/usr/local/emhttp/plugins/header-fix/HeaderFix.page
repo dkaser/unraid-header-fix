@@ -1,0 +1,37 @@
+Menu="Buttons:299"
+Link="nav-user"
+---
+<script>
+(function () {
+  const replaceLink = () => {
+    const header = document.querySelector('unraid-header-os-version');
+    if (!header) return false;
+
+    const link = header.querySelector('a[href]');
+    if (!link) return false;
+
+    try {
+      const url = new URL(link.href);
+      if (url.hostname === 'unraid.net') {
+        link.href = '/';
+        link.removeAttribute('target'); // optional
+      }
+    } catch (_) {}
+
+    return true;
+  };
+
+  // Try immediately
+  if (replaceLink()) return;
+
+  // Observe DOM until Vue mounts it
+  const observer = new MutationObserver(() => {
+    if (replaceLink()) observer.disconnect();
+  });
+
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script>
