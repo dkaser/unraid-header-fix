@@ -2,7 +2,7 @@
     "name": "header-fix",
     "package_name": "unraid-header-fix",
     "author": "Derek Kaser",
-    "support": "https://forums.unraid.net/",
+    "support": "https://forums.unraid.net/topic/196339-plugin-header-link-fix/",
     "icon": "fa-wrench",
     "min": "7.1.0"
 }
