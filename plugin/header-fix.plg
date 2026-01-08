@@ -1,0 +1,68 @@
+<?xml version='1.0' standalone='yes'?>
+<!DOCTYPE PLUGIN>
+
+<PLUGIN 
+  name="header-fix"
+  author="Derek Kaser"
+  version="2026.01.07"
+  
+  pluginURL="https://raw.githubusercontent.com/dkaser/unraid-header-fix/main/plugin/header-fix.plg"
+  support="https://forums.unraid.net/"
+  
+  
+  icon="fa-wrench"
+>
+
+<CHANGES>
+<![CDATA[
+
+### 2026.01.07
+
+- Initial release
+
+
+For older releases, see https://github.com/dkaser/unraid-header-fix/releases
+]]>
+</CHANGES>
+
+<FILE Name="/boot/config/plugins/header-fix/unraid-header-fix-2026.01.07-noarch-1.txz">
+<URL>https://github.com/dkaser/unraid-header-fix/releases/download/2026.01.07/unraid-header-fix-2026.01.07-noarch-1.txz</URL>
+<SHA256>a20d255bf80703cab8a360ee44f5141a9aa766a01eae9d4ec994036fb4d2bd29</SHA256>
+</FILE>
+
+<!--
+The 'install' script.
+-->
+<FILE Run="/bin/bash">
+<INLINE>
+<![CDATA[
+upgradepkg --install-new /boot/config/plugins/header-fix/unraid-header-fix-2026.01.07-noarch-1.txz
+
+# cleanup old versions
+rm -f $(ls /boot/config/plugins/header-fix/unraid-header-fix-*.txz 2>/dev/null | grep -v '2026.01.07')
+
+echo ""
+echo "----------------------------------------------------"
+echo " header-fix has been installed."
+echo " Version: 2026.01.07"
+echo "----------------------------------------------------"
+echo ""
+]]>
+</INLINE>
+</FILE>
+
+<!--
+The 'remove' script.
+-->
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+<![CDATA[
+removepkg unraid-header-fix
+
+rm -rf /usr/local/emhttp/plugins/header-fix
+rm -rf /boot/config/plugins/header-fix
+]]>
+</INLINE>
+</FILE>
+
+</PLUGIN>
